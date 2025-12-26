@@ -1,8 +1,8 @@
-# GitHub Good First Issues Tracker 
+# GitHub Good First Issues Tracker 🚀
 A simple web-based tool to help beginners find `good first issues` and other begineer-friendly issues from any GitHub repository.
 This project is built to support **Open Source newcomers**, especially those preparing for **GSOC(Google Summer of Code)** and first OSS contributions.
 
-## Features 
+## ✨Features 
 - Fetch open GitHub issues from any public repository
 - Filter issues by labels(e.g. `good first issue`, `bug`, `documentation`)
 - Automatically skips pull requests
@@ -10,16 +10,16 @@ This project is built to support **Open Source newcomers**, especially those pre
 - Works fully on the client-side (no backend required)
 - Deployable via GitHub Pages
 
-## Tech Stack 
+## 🛠️Tech Stack 
 - **HTML5** - Structure
 - **CSS3** - Basic styling
 - **Vanilla JavaScript(ES6)** - Logic & GitHub API integration
 - **GitHub REST API**
 
-## Project Structure 
+## 📂Project Structure 
 issue-tracker-dashboard/ | |-index.html  # UI and form |-script.js   # GitHub API logic |- style.css # styling(optional) |-README.md # Project documentation 
 
-## How to Use 
+## 🚀How to Use 
 1. Enter a repository name in the format:
    Example: facebook/react
 2. Select one or more labels from the dropdown:
@@ -44,14 +44,14 @@ issue-tracker-dashboard/ | |-index.html  # UI and form |-script.js   # GitHub AP
 > Your live site will be available at:
 https://alok844937-design.github.io/issue-tracker-dashboard/
 
-## Motivation 
+## 🎯Motivation 
 Finding a begineer-friendly issue is often the **hardest part of starting open source**.
 This project aims to: 
 - Reduce friction for first-time contributions
 - Help students prepare for **GSOC & OSS programs**
 - Provide a clean, minimal, begineer-friendly interface
 
-## Future Improvements 
+## 🧩Future Improvements 
 - Pagination Support
 - Default GSOC organization suggestions
 - GitHub authenticatiion (higher rate limit)
