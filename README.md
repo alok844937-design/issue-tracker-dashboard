@@ -69,3 +69,9 @@ This project is licensed under the **MIT License**
 
 ## Author 
 Built a ❤️ by a student preparing for **Open Source & GSOC 2026**.
+
+- One-click starter repositories (React, Kubernetes, VS Code)
+- Pagination support (10 issues per page)
+- Clean card-based UI with hover effects
+- Beginner-friendly contribution guidance 
+- 
