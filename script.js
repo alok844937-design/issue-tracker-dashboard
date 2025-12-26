@@ -8,6 +8,9 @@ fetchBtn.addEventListener("click", async () => {
   try {
     const res = await fetch(`https://api.github.com/repos/${repo}/issues?state=open&labels=good%20first%20issue`);
     const data = await res.json();
+    if(!res.ok) {
+      throw new Error(:Repository not found or API error");
+    }
 
     issuesDiv.innerHTML = "";
 
