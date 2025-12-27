@@ -3,8 +3,9 @@ const repoInput = document.getElementById("repoInput");
 const labelSelect = documnent.getElementByID("labelSelect");
 const issuesDiv = document.getElementById("issuesDiv");
 
+let allIssues = [];
 let currentPage = 1;
-const PER_PAGE = 10;
+const issuesPER_PAGE = 10;
 
 <!-- Quick Repo buttons --> 
   document.querySelectorAll("#quickRepos button").forEach(btn => {
@@ -37,12 +38,14 @@ form.addEventListener("submit", async (e) => {
     }
 
     const data = await res.json();
-
+    allIssues = data.filter(issue => !issue.pull_request);
     if (data.length === 0) {
       issuesDiv.innerHTML = "No beginner-friendly issues found.";
       return;
     }
-
+    currentPage = 1;
+    renderIssues();
+    renderPagination();
     issuesDiv.innerHTML = "";
 
     const scaryKeywords = [
@@ -91,3 +94,55 @@ document.getElementById("prev").onclick = () => {
   form.dispatchEvent(new Event("submit"));
   }
 };
+
+function renderIssues() {
+  issuesDiv.innerHTML = "";
+
+const start = (currentPage - 1 ) * issuesPerPage;
+const end = start + issuesPerPage;
+const pagesIssues = allIssues.slice(start, end);
+
+pageIssues.forEach(issue => {
+  const div = document.createElement("div");
+  div.className = "issue";
+  div.innerHTML = `<a href="${issue.html_url}"
+  target="_blank">${issue.title}</a>
+  <p>Author: ${issue.user.login}</p>
+  <p class="hint-text">Click to open on GitHub</p>
+  `;
+  issuesDiv.appendChild(div);
+});
+}
+
+function renderPagination() {
+  const pagination = document.getElementById("pagination");
+  pagination.innerHTML = "";
+  const totalPages = Math.ceil(allIssues.length / issuesPerPage);
+  
+  const prevBtn =
+document.createElement("button");
+  prevBtn.innerText = "Previous";
+  prevBtn.disabled = currentPage === 1;
+  prevBtn.onclick = () => {
+    curretPage--;
+    renderIssues();
+    renderPagination();
+  };
+
+  const nextBtn= 
+    document.createElement("button");
+  nextBtn.innerText = "Next";
+  nextBtn.disabled = currentPage === totalPages;
+  nextBtn.onclick = () => {
+    currentPage++;
+    renderIssues();
+    renderPagination();
+  };
+  
+  const pageInfo = document.createElement("span");
+  pageInfo.innerText = `Page ${currentPage} of ${totalPages} `;
+  
+  pagination.appendChild(prevBtn);
+  pagination.appendChild(pageInfo);
+  pagination.appendChild(nextBtn);
+}
