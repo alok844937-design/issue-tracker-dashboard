@@ -43,9 +43,9 @@ issue-tracker-dashboard/ | |-index.html  # UI and form |-script.js   # GitHub AP
 - (Future enhancement: GitHub token support)
  
 ## Live Demo (GitHub Pages)
-> Enable GitHub Pages from:
-> **Settings → Pages → Source → main branch /root**
-> Your live site will be available at:
+> Enable GitHub Pages from:<br>
+> **Settings → Pages → Source → main branch /root**<br>
+> Your live site will be available at:<br>
 https://alok844937-design.github.io/issue-tracker-dashboard/
 
 ## 🎯Motivation 
