@@ -9,7 +9,7 @@ let allIssues = [];
 let currentPage = 1;
 const issuesPerPage = 10;
 
-<!-- Quick repo buttons --> 
+//<!-- Quick repo buttons --> 
   document.querySelectorAll(".quick-repos button").forEach(btn => {
   btn.addEventListener("click", () => {
     repoInput.value = btn.dataset.repo;
@@ -17,7 +17,7 @@ const issuesPerPage = 10;
   });
 });
 
-<!-- Fetch issues -->
+//<!-- Fetch issues -->
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -56,7 +56,7 @@ form.addEventListener("submit", async (e) => {
   }
 });
 
-<!-- Render issues (10 per page) -->
+//<!-- Render issues (10 per page) -->
   function renderIssues() {
   issuesDiv.innerHTML = "";
 
@@ -77,7 +77,7 @@ pageIssues.forEach(issue => {
 });
 }
 
-<!-- Pagination logic --> 
+//<!-- Pagination logic --> 
 function renderPagination() {
   const totalPages = Math.ceil(allIssues.length / issuesPerPage);
   pageInfo.innerText = `Page ${currentPage} of ${totalPage}`;
@@ -85,7 +85,7 @@ function renderPagination() {
   nextBtn.disabled = currentPage === totalPages;
 }
 
-<!-- Button events --> 
+//<!-- Button events --> 
 prevBtn.addEventListener("click", () => {
   if (curremtPage > 1) {
     currentPage--;

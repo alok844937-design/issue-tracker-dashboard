@@ -7,18 +7,19 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  
+  <div class="header">
   <h1>GitHub Good First Issues Dashboard</h1>
 
-   <!-- Begineer Hint -->
-    <p id="hint">
+   <!-- Beginner Hint -->
+    <h4 id="hint">
     New to open source? Start with issues marked <strong>good first issue</strong> or 
     <strong>documentation</strong>
-  </p>
+    </h4>
+  </div>
   
   <!-- Quick repos -->
   <div class="quickRepos">
-    <p><strong>Quick start (Begineer friendly):</strong></p>
+    <h3><strong>Quick start (Beginner friendly):</strong></h3>
     <button data-repo="facebook/react">React</button>
     <button data-repo="Kubernetes/Kubernetes">Kubernetes</button>
     <button data-repo="microsoft/vscode">VS Code</button>
@@ -27,18 +28,18 @@
 
   <!-- Repo Form -->
   <form id="repoForm">
+    <div>
+      <p>Repository</p>
   <input type="text" id="repoInput" placeholder="owner/repo e.g. facebook/react" required />
     <br>
-    <label>Select Labels:</label>
-    <select id="labelSelect" multiple>
-      <option value="good first issue" selected>good first issue</option>
-      <option value="documentation">documentation</option>
-      <option value="bug">bug</option>
-      <option value="enhancement">enhancement</option>
-    </select>
-    <button type="submit">Fetch Issues</button>
-    <br>
+    <label>Select Labels:</label><br/>
+    <select id="labelSelect">
+      <option value="documentation">good first issue</option>
+      <option value="'bug">bug</option>
+      <option value="enhancement">enhancement</otpion>
+    </select><br/>
   <button type="Submit">Fetch Issues</button>
+    </div>
   </form>
 
   <!-- Issues -->

@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
-  background: #f9f9f9;
+  background: #f3f4f6;
 }
 
 h1 {
@@ -10,24 +10,92 @@ h1 {
   margin-bottom: 10px;
 }
 
-.quick-repos button {
-  margin: 5px 5px 10px 0;
-  padding: 6px 10px;
+.quickRepos {
+  background-color: rgb(219, 232, 243);
+  width: 95%;
+  border-radius: 1rem;
+  height: fit-content;
+  margin: 50px;
+  justify-self: center;
+  align-items: center;
+}
+
+.quickRepos h3 {
+  margin-left: 5px;
+}
+
+.quickRepos button {
+  margin: 20px;
+  padding: 10px;
   border: none;
   border-radius: 6px;
   background: #24292e;
   color: white;
   cursor: pointer;
 }
+form p{
+  padding-top: 1em;
+  font-size: 13px;
+}
 
-.quick-repos button:hover {
+form button{
+  width: 70%;
+  align-items: center;
+  margin-left: 15%;
+  border-radius: 1rem;
+  margin-bottom: 10px;
+  padding: 1em;
+}
+
+form{
+  background-color: rgb(219, 232, 243);
+  justify-items: center;
+  margin: 40px;
+  border-radius: 1rem;
+  width: 95%;
+  justify-self: center;
+
+}
+
+form input{
+  padding: 1em;
+  border-radius: 10px;
+  width: 90%
+}
+
+form select{
+  padding: 1em;
+  border-radius: 10px;
+  width: 93%;
+}
+
+form label{
+  font-size: 13px;
+  margin-top: 1rem;
+}
+
+form div{
+  width: 100%;
+
+}
+
+.header{
+  background-color: whitesmoke;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.288);
+}
+
+.quickRepos button:hover {
   background: #444;
-  
-.hint {
+}
+h4 {
   background: #eef7ee;
+  width: 90%;
   padding: 10px;
   border-left: 4px solid #4caf50;
-  margin-top: 10px 0;
+  margin: 10px;
+  text-align: center;
+  justify-self: center;
 }
 
 form {
@@ -58,7 +126,7 @@ button {
   font-weight: bold;
   text-decoration: none;
   color: #0366d6;
-
+}
 .badge {
   display: inline-block;
   margin-top: 6px;
@@ -67,7 +135,7 @@ button {
   background: #e7f3ff;
   color: #0366d6;
   border-radius: 4px;
-    
+}
 #pagination {
   margin-top: 15px;
   text-align: center;
